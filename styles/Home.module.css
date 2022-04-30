@@ -123,18 +123,6 @@
   z-index: -1;
 }
 
-.searchInput {
-  border: 0;
-  border-bottom: 1px solid hsla(0,0%,100%,.9);
-  color: #FFF;
-  background: transparent;
-  border-radius: 0;
-  word-break: normal;
-  outline: 0;
-  height: 50px;
-  width: 640px;
-}
-
 .navBar {
   display: flex;
   justify-content: flex-end;
