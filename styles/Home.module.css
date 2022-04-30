@@ -134,3 +134,10 @@
   height: 50px;
   width: 640px;
 }
+
+.navBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 40px;
+}
