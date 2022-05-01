@@ -6,13 +6,17 @@ import styles from '../../styles/SearchInput.module.css'
 const SearchInput = () => {
     const [value, setValue] = useState('');
     const router = useRouter()
+    const { pathname } = router
     const { chain } = useContext(ChainsContext)
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault();
     
         if (value) {
-            router.replace(`${chain}/address/${value}`)
+            router.push({ pathname, query: {
+                chainName: chain,
+                addressId: value
+            }})
         }
       };
 
