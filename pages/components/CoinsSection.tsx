@@ -36,7 +36,7 @@ export const CoinsSection = ({ addressId }: { addressId: string}) => {
     return <div>
         {coinData.balance.map(coin => {
             return (
-                <div className={styles.coinContent}>
+                <div key={coin.denom} className={styles.coinContent}>
                     <header>{coin.denom}</header>
                     <section>{formatNumber(coin.available)}</section>
                 </div>
