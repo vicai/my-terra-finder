@@ -12,7 +12,7 @@ export const SearchInput = () => {
         e.preventDefault();
     
         if (value) {
-          router.push(`${chain}/address/${value}`)
+            router.replace(`${chain}/address/${value}`)
         }
       };
 
