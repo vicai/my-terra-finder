@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project to create a simplified version of terra finder [`terra-finder`](https://finder.terra.money/).
 
+Preview Url: https://my-terra-finder-vicai.vercel.app/
+
 Video preview:
 
 https://user-images.githubusercontent.com/3432050/166129438-f9db56ef-8233-4da6-aa1b-3a061261dff4.mov
