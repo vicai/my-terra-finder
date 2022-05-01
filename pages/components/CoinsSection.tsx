@@ -26,8 +26,8 @@ const CoinsSection = ({ addressId }: { addressId: string}) => {
     const { data, error } = useSWR(addressId ? `${TERRA_BANK_PATH}${addressId}`: null, fetcher)
     
     if (!data) return <h2>loading...</h2>
-    if (error) return <Error statusCode={error} />
     const coinData = data as bankResponse
+    if (error || !coinData.balance) return <Error statusCode={404} />
 
     if (coinData.balance && coinData.balance.length === 0) {
         return <>This account does not hold any coins yet.</>

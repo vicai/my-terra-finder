@@ -13,10 +13,16 @@ const SearchInput = () => {
         e.preventDefault();
     
         if (value) {
-            router.push({ pathname, query: {
-                chainName: chain,
-                addressId: value
-            }})
+            if (pathname === '/') {
+                router.push(`${chain}/address/${value}`)
+            } else if (pathname === '/[chainName]/address/[addressId]') {
+                router.push({ pathname, query: {
+                    chainName: chain,
+                    addressId: value
+                }})
+            } else {
+                router.push('/404')
+            }
         }
       };
 

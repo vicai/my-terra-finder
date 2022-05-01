@@ -56,14 +56,16 @@ export const TransactionsSection = ({ addressId }: { addressId: string}) => {
     useEffect(() => {
         if (data) {
             const txsData = data as TransactionsResponse
-            setAllTxs([...allTxs, ...txsData.txs])
+            if (txsData.txs) {
+                setAllTxs([...allTxs, ...txsData.txs])
+            }
         }
     }, [data])
 
     if (!data) return <h2>loading...</h2>
     const txsData = data as TransactionsResponse
 
-    if (error || !txsData.txs) return <Error statusCode={error} />
+    if (error || !txsData.txs) return <Error statusCode={404} />
     
     if (allTxs && allTxs.length === 0) {
         return <>This account does not have any transitions yet.</>
