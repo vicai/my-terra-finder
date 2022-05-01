@@ -1,0 +1,22 @@
+.table {
+    width: 100%;
+}
+
+.tableRow {
+    display: grid;
+    align-items: start;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;     
+}
+
+.tableCell {
+    text-overflow: ellipsis;
+    overflow : hidden;
+    white-space: nowrap;
+    padding: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid #d8ddf0;
+}

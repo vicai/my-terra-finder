@@ -1,0 +1,34 @@
+.accountContent {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 40px;
+    color: #2043b5;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    border: 1px solid #d8ddf0;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 5%);
+    background: #fff;
+    margin-top: 20px;
+}
+
+.cardHeader {
+    border-bottom: 1px solid #d8ddf0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 500;
+    background: rgba(84,147,247,.1);
+}
+
+.cardBody {
+    padding: 20px;
+    font-size: 14px;
+}
+
