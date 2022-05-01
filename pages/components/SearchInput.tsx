@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { ChainsContext } from '../../contexts/ChainsContext'
 import styles from '../../styles/SearchInput.module.css'
 
-export const SearchInput = () => {
+const SearchInput = () => {
     const [value, setValue] = useState('');
     const router = useRouter()
     const { chain } = useContext(ChainsContext)
@@ -29,3 +29,5 @@ export const SearchInput = () => {
         </form>
     );
 }
+
+export default SearchInput

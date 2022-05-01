@@ -1,11 +1,11 @@
 import { useRouter } from 'next/router'
 import Error from 'next/error'
-import { AccountHeader } from '../../components/AccountHeader'
+import AccountHeader from '../../components/AccountHeader'
 import styles from '../../../styles/AccountDetailPage.module.css'
-import { CoinsSection } from '../../components/CoinsSection'
+import CoinsSection from '../../components/CoinsSection'
 import { ReactNode } from 'react'
-import { TransacationsSection } from '../../components/TransactionsSection'
-import { TokensSection } from '../../components/TokensSection'
+import TransactionsSection from '../../components/TransactionsSection'
+import TokensSection from '../../components/TokensSection'
 
 const Card = ({ header, body}: { header: string, body: ReactNode}) => {
     return  (<div className={styles.card}>
@@ -28,7 +28,7 @@ const AccountDetailPage = () => {
                 <Card header={"Address"} body={addressId}></Card>
                 <Card header={"Coins"} body={<CoinsSection addressId={addressId as string} />}></Card>
                 <Card header={"Tokens"} body={<TokensSection addressId={addressId as string} />}></Card>
-                <Card header={"Transactions"} body={<TransacationsSection addressId={addressId as string} />}></Card>
+                <Card header={"Transactions"} body={<TransactionsSection addressId={addressId as string} />}></Card>
             </div>
         </>
     );

@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import logo from '../static/logo.svg'
 import terraFinder from '../static/terrafinder.jpg'
 import NetworkSelect from './components/NetworkSelect'
-import { SearchInput } from './components/SearchInput'
+import SearchInput from './components/SearchInput'
 
 const Home: NextPage = () => {
   return (

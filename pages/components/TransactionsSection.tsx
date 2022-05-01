@@ -46,7 +46,7 @@ interface TransactionsResponse {
 
 const PAGINATION_LIMIT = 100
 
-export const TransacationsSection = ({ addressId }: { addressId: string}) => {
+export const TransactionsSection = ({ addressId }: { addressId: string}) => {
     const [next, setNext] = useState(0)
     // API queries: ?offset=${start}&limit=${end}&account=${addressId}
     const { data, error } = useSWR(addressId ? `${TERRA_TXS_PATH}?offset=${next}&limit=${PAGINATION_LIMIT}&account=${addressId}`: null, fetcher)
@@ -66,7 +66,7 @@ export const TransacationsSection = ({ addressId }: { addressId: string}) => {
     if (error || !txsData.txs) return <Error statusCode={error} />
     
     if (allTxs && allTxs.length === 0) {
-        return <>This account doesn't have any transitions yet.</>
+        return <>This account does not have any transitions yet.</>
     }
 
     const handleClickMore = () => {
@@ -103,3 +103,5 @@ export const TransacationsSection = ({ addressId }: { addressId: string}) => {
         </div>
     </div>
 }
+
+export default TransactionsSection

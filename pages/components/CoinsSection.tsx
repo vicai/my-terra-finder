@@ -22,7 +22,7 @@ interface bankResponse {
     vesting: Coin[];
 }
 
-export const CoinsSection = ({ addressId }: { addressId: string}) => {
+const CoinsSection = ({ addressId }: { addressId: string}) => {
     const { data, error } = useSWR(addressId ? `${TERRA_BANK_PATH}${addressId}`: null, fetcher)
     
     if (!data) return <h2>loading...</h2>
@@ -30,7 +30,7 @@ export const CoinsSection = ({ addressId }: { addressId: string}) => {
     const coinData = data as bankResponse
 
     if (coinData.balance && coinData.balance.length === 0) {
-        return <>This account doesn't hold any coins yet.</>
+        return <>This account does not hold any coins yet.</>
     }
     
     return <div>
@@ -44,3 +44,5 @@ export const CoinsSection = ({ addressId }: { addressId: string}) => {
         })}
     </div>
 }
+
+export default CoinsSection
