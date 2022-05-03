@@ -39,7 +39,7 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 1. Each components and pages are break down a reusable modules
 1. This is a typesafe project, it will help us to catch schema bugs easily.
-1. Level Next.js 12, so we can have easy next router and fast fresh, it make local dev experiences much better.
+1. Use Next.js 12, so we can have easy next router and fast fresh, it make local dev experiences much better.
 
 ## TODOS
 
